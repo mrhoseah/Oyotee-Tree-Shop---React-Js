@@ -1,9 +1,9 @@
 import React from 'react'
 
-function NewProduct() {
+function Create() {
   return (
     <div>NewProduct</div>
   )
 }
 
-export default NewProduct
+export default Create

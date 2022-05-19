@@ -6,10 +6,10 @@ import {
 import './index.scss'
 import NavBar from './components/NavBar'
 import Cart from "./components/Cart";
-import ProductsListing from "./components/products/ProductListing";
-import Product from "./components/products/Product";
-import NewProduct from "./components/products/NewProduct";
-import ProductRatings from "./components/products/NewProduct";
+import ProductsListing from "./pages/products/Index";
+import EditProduct from "./pages/products/Edit";
+import CreateProduct from "./pages/products/Create";
+import ShowProduct from "./pages/products/Show";
 import HomePage from "./routes/HomePage"
 import Favourite from "./routes/Favourite"
 import PlantCare from "./routes/PlantCare"
@@ -36,9 +36,10 @@ function App(props) {
                 <Route path='/workshops' element={<Workshops />} />
                 <Route path='/cart' element={<Cart />} />
                 <Route path="products" element={<ProductsListing />}>
-                  <Route path=":productId" element={<Product />} />
-                  <Route path="new" element={<NewProduct />} />
-                  <Route index element={<ProductRatings />} />
+                  <Route path=":productId" element={<ShowProduct />} />
+                  <Route path=":productId" element={<EditProduct />} />
+                  <Route path="new" element={<CreateProduct />} />
+                  <Route index element={< ProductsListing/>} />
                 </Route>
                 <Route path="account" element={<Account />}>
                   <Route path=":userId" element={<Profile />} />

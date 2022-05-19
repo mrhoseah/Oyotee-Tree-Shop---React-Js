@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductListing from '../components/products/ProductListing'
+import ProductListing from '../pages/products/Index'
 import Search from  '../components/Search'
 function Shop() {
   return (
