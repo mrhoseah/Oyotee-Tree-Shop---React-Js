@@ -1,18 +1,21 @@
 import React from 'react'
-import ProductListing from '../pages/products/Index'
+import RefferalDiscount from '../components/Discounts/RefferalDiscount'
+import Filter from '../components/Filter'
+import ProductListing from '../components/products/Index'
 import Search from  '../components/Search'
 function Shop() {
   return (
-    <div className='md:grid grid-cols-5 md:divide-x gap-4'>
-      <div className='leftSidebar cols-pan-1 p-4'>
-        Filter
+    <div className='md:grid grid-cols-5 md:divide-x pb-4'>
+      <div className='leftSidebar cols-span-1'>
+        <Filter />
+        <RefferalDiscount />
       </div>
-      <div className="shopContent col-span-3 mx-4 p-4 space-y-4">
+      <div className="shopContent col-span-3 md:px-10 space-y-4">
         <Search />
         <ProductListing />
       </div>
-      <div className='rightSidebar cols-span-1 p-4'>
-        Right
+      <div className='rightSidebar cols-span-1'>
+        
       </div>
     </div>
   )

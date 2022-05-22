@@ -8,36 +8,37 @@ const productSlice =createSlice({
             name:'',
             quantity: 0,
             description:'',
-            category_id:'',
-            rating:0,
+            otherDetails:'',
+            image:'',
+            category:{},
+            ratings:0,
             likes:0,
-            loading:false,
-            error:null
         }
     },
     reducers:{
         added:(state,action)=>{
             state.productInfo=(state)=>{
-                state.id=Math.floor(Math.random() * 100)
-                state.name=action.payload.name
-                state.description=action.payload.description
-                state.quantity=action.payload.quantity
+                state.id=action.payload.id
+                state.name=action.payload.name,
+                state.quantity=action.payload.quantity,
+                state.description=action.payload.description,
+                state.otherDetails=action.payload.otherDetails,
+                state.image=action.payload.image,
+                state.category=action.category,
+                state.ratingsCount=action.payload.ratingsCount,
+                state.reviews=action.payload.reviews,
+                state.rating=action.payload.rating,
+                state.likes=action.payload.like
             }
         },
         rated:(state,action)=>{
-            state.productInfo.rating +=action.payload
+            state.productInfo[action,payload].ratings =action.payload.rating
         },
-        unrated:(state,action)=>{
-            state.productInfo.likes-=action.payload
-        },
-        liked:(state,action)=>{
-            state.productInfo.likes +=action.payload
-        },
-        unliked:(state,action)=>{
-            state.productInfo.rating-=action.payload
-        },
+        likeToggled:(state,action)=>{
+            state.productInfo.likes =action.payload.likes
+        }
     },
 
 })
-export const {rated,unrated,liked,unliked,added} = productSlice.actions
+export const {rated,likeToggled,added} = productSlice.actions
 export default productSlice.reducer
