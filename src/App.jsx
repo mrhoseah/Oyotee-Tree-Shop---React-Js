@@ -19,7 +19,7 @@ import Shop from "./routes/Shop"
 import Account from "./routes/profile/Account"
 import Profile from "./routes/profile/Profile"
 import EditProfile from "./routes/profile/EditProfile"
-import {store} from './stores/store';
+import {store} from './stores';
 import {Provider} from 'react-redux'
 function App(props) {
   return (

@@ -23,7 +23,7 @@ function Search() {
               <button type="button" className="text-white bg-green-600 hover:bg-green-800 focus:ring-green-300 rounded-xl text-sm px-3 py-1.5 dark:bg-bgreenlue-600 dark:hover:bg-green-600 focus:outline-none dark:focus:ring-green-800">Relevance</button>
               <button type="button" className="text-gray-900 shrink-0 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-gray-200 rounded-xl text-sm px-3 py-1.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Popular</button>
               <button type="button" className="shrink-0 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-gray-200 rounded-xl text-sm px-3 py-1.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Most New</button>
-              <div className="flex justify-center">
+              <div className="flex gap-1 align-middle">
               <div className="xl:w-96">
                 <select className="
                   block

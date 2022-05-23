@@ -2,8 +2,8 @@ import React from 'react'
 import {HeartIcon as HeartOutline} from '@heroicons/react/outline'
 import {HeartIcon as HeartSolid} from '@heroicons/react/solid'
 import { useDispatch, useSelector } from 'react-redux';
-import { added,rated,likeToggled} from '../../stores/products/productsSlice';
-import { addedToCart } from '../../stores/cart/cartSlice';
+import { added,rated,likeToggled} from '../../stores/slices/productsSlice'
+import { addedToCart } from '../../stores/slices/cartSlice';
 import Rating from '../Rating';
 
 function Product({product}) {

@@ -13,13 +13,17 @@ function Index() {
       .then((res)=>{
         setLoading(false);
         setProducts(res.data)
-      }).catch((err)=>setError(err))
+      }).catch((err)=>{
+        setLoading(false);
+        setError(err)
+      })
     }
   fetchData()
   }, [])
   return (
     <div>
     {loading && (<div className='py-2'>Fetching products</div>)}
+    {error && (<div className='text-red-500'>{error.message}</div>)}
     <div className="flex justify-start items-center align-middle flex-wrap gap-3">
       {products && products.map((product)=>
         <Product product={product} key={product.id} />
