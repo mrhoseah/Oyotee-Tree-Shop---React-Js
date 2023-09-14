@@ -12,9 +12,9 @@ function Product({product}) {
   const dispatch = useDispatch()
   return (
     <div className='border-2 border-slate-100 w-64 p-6 relative rounded-2xl space-y-4'>
-        <img src={`http://localhost:3030/${product.image_path}`} alt={product.name} className='object-cover' />
+        <img src={`http://localhost:3030/images/${product.image_url}`} alt={product.name} className='object-cover' />
         <div>{product.name}</div>
-          <div className='flex justify-start align-middle items-center gap-2'><Rating ratingValue={3.4} /> <span className='text-sm'>({product._count.ratings})</span></div>
+          <div className='flex justify-start align-middle items-center gap-2'><Rating ratingValue={3.4} /> <span className='text-sm'>({product._count.reviews})</span></div>
           <div className='flex justify-between items-end align-bottom'>
             <div>
                 <p className="text-xs text-slate-200">Price</p>

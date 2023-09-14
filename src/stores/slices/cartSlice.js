@@ -24,7 +24,7 @@ const cartSlice =createSlice({
                     name:payload.name,
                     quantity:1,
                     price:payload.price,
-                    image:payload.image,
+                    image_url:payload.image_url,
                     added:true
                 }
                 state.push(itemData)

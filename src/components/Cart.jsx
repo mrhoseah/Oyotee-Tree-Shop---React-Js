@@ -10,7 +10,9 @@ function Cart(){
     const items = useSelector((state)=>state.cart)
     
     Object.keys(items).forEach(function(item){
-        totalCart+=items[item].itemCount * items[item].price;
+      
+      console.log(items[item].quantity)
+        totalCart+=items[item].quantity * items[item].price;
         listCart.push(items[item]);
     });
     function totalPrice(price,qty){
@@ -51,7 +53,7 @@ function Cart(){
                     </td>
                     <th scope="row" className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">{item.name} </th>
                     <td className="px-6 py-4">{item.price} </td>
-                    <td className="px-6 py-4"><img src={item.image} alt={item.name} className='w-48 rounded-sm'/> </td>
+                    <td className="px-6 py-4"><img src={`http://localhost:3030/images/${item.image_url}`} alt={item.name} className='w-16 rounded-lg'/> </td>
                     <td className="flex justify-start align-middle items-center gap-2 px-6 py-4">
                       <button disabled={item.quantity==1} onClick={()=>dispatch(quantityDecreased(item.id))} className="rounded-sm font-medium text-white bg-red-600 dark:text-gray-500"><MinusIcon className='h-4 w-4'/></button>
                       <div className='ml-2'>{item.quantity}</div>

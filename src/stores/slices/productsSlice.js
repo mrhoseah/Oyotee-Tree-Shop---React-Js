@@ -31,10 +31,10 @@ const productSlice =createSlice({
             }
         },
         rated:(state,action)=>{
-            state.list[action,payload].ratings =action.payload.rating
+            state.list[action.payload].ratings =action.payload.rating
         },
         likeToggled:(state,action)=>{
-            state.list[action.action].likes =action.payload.likes
+            state.list[action.payload].likes =action.payload.likes
         }
     },
 

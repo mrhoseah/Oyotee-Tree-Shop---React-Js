@@ -42,7 +42,7 @@ function CategoryFilter() {
         {categories.length>0 &&(
             <div className='px-4 py-2'>
                {categories.map((category)=>
-                <div className='flex flex-row'>
+                <div className='flex flex-row' key={category.id}>
                     <div className="flex align-middle" key={category.id}>
                         <input 
                             className="peer form-checkbox h-3 w-3 border rounded-sm border-gray-200 focus:ring-0 focus:ring-offset-0 text-green-600 transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" 
